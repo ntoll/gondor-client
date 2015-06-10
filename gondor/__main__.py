@@ -544,7 +544,6 @@ def cmd_run(args, env, config):
                 ssl_kwargs = {
                     "ca_certs": os.path.join(os.path.abspath(os.path.dirname(__file__)), "ssl", "run.gondor.io.crt"),
                     "cert_reqs": ssl.CERT_REQUIRED,
-                    "ssl_version": ssl.PROTOCOL_SSLv3
                 }
                 sock = ssl.wrap_socket(sock, **ssl_kwargs)
                 try:
